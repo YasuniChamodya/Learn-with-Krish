@@ -9,8 +9,7 @@ make sure they captured that.
 /* 
 Following 3 functions are implemented to find a missing value in a given sequence assuming that
 if there is no missing value in the middle,missing one shoud be the start or end value.
-These functions work correctly if the any given sequnce start with odd number like 21 and 
-end with an even number like 30 in the given sequence. 
+These functions work correctly if the any given sequnce start with odd number like 21,31... 
 */
 
 var sequence = [21,25,29,28,22,24,27,26,30,23];
