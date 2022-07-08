@@ -1,6 +1,11 @@
 Let's learn the most commonly used design pattern in the right way. What does Singleton mean? It means one instance per container. When it comes to Java, 1 instance per JVM. Before jumping to the implementation, I will explain some key points to keep in your mind that you may have misunderstood. If you implement the Singleton design pattern,
+
 •	Only one instance of the class should exist in the JVM.
+
 •	Even though you can take arguments and still give a single instance, do not take any argument when you create an instance.
+
 •	Even though it is possible do not use Singleton everywhere except where it is really needed. Since there are no instance variables and there is no reference to create, it is hard to unit test.
 
-Let’s go with an example to learn the Singleton design pattern. Just assume you are the manager of a shop. Suppose your shop has multiple computers which are running multiple applications needed for day-to-day operations. From those applications, you want to take some printouts and handed over to the owner at the end of the month. But you have only one printer at the shop. Therefore you want to add a printing feature to all of your applications and use the same printer with all the computers. Now you should be able to understand what Singleton means. You need to have a printer class and only one instance should be created from it. That single instance needs to be shared with others. You can finf the detailed explanation for this code from https://medium.com/@yasunichamodya/1-singleton-design-pattern-8e5954ff66a0  
+Let’s go with an example to learn the Singleton design pattern. You can find the detailed explanation for this code from https://medium.com/@yasunichamodya/1-singleton-design-pattern-8e5954ff66a0 
+
+ 
