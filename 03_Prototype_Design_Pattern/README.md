@@ -1,0 +1,3 @@
+Do you want to avoid lots of overheads and performance issues in the object creation process? If your answer is ‘Yes’, let’s learn how with the Prototype design pattern. You can use this design pattern when the object creation process is costly, a lot of time and resource-consuming process while you already have a similar object existing. 
+
+You can find more about the Prototype Design Pattern and the detailed explanation of the code from https://medium.com/@yasunichamodya/3-prototype-design-pattern-466eb4903f12
