@@ -1,0 +1,3 @@
+Have you ever wanted to use multiple constructors in your program? I am pretty sure that your answer is ‘Yes’ because in some cases there are multiple combinations when it has too many arguments and some of them are optional we need to pass nulls. Let’s take an example to understand it. 
+
+You can find more about the Builder Design Pattern with an example and the detailed explanation of the code from https://medium.com/@yasunichamodya/4-builder-design-pattern-b64b9f146335
