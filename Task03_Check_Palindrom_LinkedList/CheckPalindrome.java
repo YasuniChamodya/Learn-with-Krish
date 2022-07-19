@@ -1,6 +1,7 @@
 package palindrome;
 
 // Task 02 - Find a given a Singly Linked List is Palindrome or not
+// Example - racecar
 
 public class CheckPalindrome{
 	
