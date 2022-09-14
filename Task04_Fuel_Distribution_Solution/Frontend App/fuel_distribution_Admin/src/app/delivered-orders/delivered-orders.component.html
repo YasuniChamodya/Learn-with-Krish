@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+
+<div class="d-flex vh-0 justify-content-center">
+    <div class="row align-self-center">
+      <div class="card mr-5" style="width:1500px">
+        <h3>Delivered Orders</h3>
+        <div class="col-md-12">
+         
+
+          <table class="table table-primary">
+            <thead>
+                <tr>
+                  
+                    <th>Order ID</th>
+                    <th>GasStation Name</th>
+                    <th>Gas Station ID</th>
+                    <th>Address</th>
+                    <th>Order Quentity</th>
+                    <th>Order Date</th>
+                    <th>Delivered Date</th>
+                    
+                 
+                   
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr *ngFor="let get of posts | async"> -->
+                
+
+                <tr *ngFor="let get of DeliveredOrders">
+                    <td class="table-info">{{get.id}}</td>
+                    <td>{{get.name}}</td>
+                    <td>{{get.fuelStationId}}</td>
+                    <td>{{get.address}}</td>
+                    <td>{{get.qty}} L</td>
+                    <td class="table-warning">{{get.date}}</td>
+                    <td class="table-success">{{get.scheduleTime}}</td>
+                    
+                    
+                 
+               
+              </tr>
+
+            
+
+
+            </tbody>
+        
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>

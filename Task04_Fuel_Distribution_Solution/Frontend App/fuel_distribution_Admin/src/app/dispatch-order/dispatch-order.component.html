@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+
+
+
+    <div class="d-flex vh-0 justify-content-center">
+      <div class="row align-self-center">
+        <div class="card mr-5" style="width:1500px">
+          <h3>Dispatch Order</h3>
+          <div class="col-md-12">
+          
+
+            <table class="table table-primary">
+              <thead>
+                  <tr>
+                    
+                      <th>Order ID</th>
+                      <th>Gas Station Name</th>
+                      <th>Gas Station ID</th>
+                      <th>Address</th>
+                      <th>Order Quentity</th>
+                      <th>Allocation Status</th>
+                      <th>Schedule Status</th>
+                      <th>Dispatch Status</th>
+                      <th>Schedule Date</th>
+                      <th>Schedule time</th>
+                      <th>Dispatch</th>
+                     
+                      
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- <tr *ngFor="let get of posts | async"> -->
+                  
+
+                  <tr *ngFor="let get of OrderDetails" >
+                    <td>{{get.id}}</td>
+                    <td>{{get.name}}</td>
+                    <td>{{get.fuelStationId}}</td>
+                    <td>{{get.address}}</td>
+                    <td>{{get.qty}} L</td>
+                    <td class="table-success">{{get.allocation}}</td>
+                    <td class="table-success">{{get.schedule}}</td>
+                    <td class="table-danger">{{get.dispatch}}</td>
+                    <td>{{get.scheduleDate}}</td>
+                    <td>{{get.scheduleTime}}</td>
+                    <td><button class="btn btn-success" (click)="dispatch(get.id,get.fuelStationId)">Dispatch</button></td>
+                </tr>
+
+              
+
+
+              </tbody>
+          
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+

@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+
+<div class="imagebg" >
+    <H1>Welcome to CPSTL System</H1>
+
+  
+    <div class="d-flex vh-0 justify-content-center">
+        <div class="row align-self-center">
+          <div class="card mr-5" style="width:1000px">
+            <h3>Stock</h3>
+            <div class="col-md-12">
+            
+  
+              <table class="table table-primary">
+                <thead>
+                    <tr>
+                      
+                        <th>Fuel ID</th>
+                        <th>Fuel Type</th>
+                        <th>Stock</th>
+                        <th>Stock</th>
+                        
+                       
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr *ngFor="let get of posts | async"> -->
+                    
+  
+                    <tr *ngFor="let get of stock" >
+                      <td>{{get.stockId}}</td>
+                      <td>{{get.type}}</td>
+                      <td>{{get.avalableStock}} L</td>
+                      <!-- <td>{{get.progress}}</td> -->
+                      <td><app-progress-bar [progress]='get.progress'></app-progress-bar> {{get.progress}} %</td>
+                      
+                  </tr>
+  
+                
+  
+  
+                </tbody>
+            
+            </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+</div>

@@ -1,0 +1,84 @@
+
+<app-navbar></app-navbar>
+
+<div id="container">
+    <div class="d-flex vh-10 justify-content-center">
+      <div class="row align-self-center">
+        <div class="card mr-5" style="width:1400px">
+
+            <form class="row g-3">
+                   
+                <div class="col-auto">
+                   
+                    <input type="text" class="form-control" id="inputPassword2" [formControl]="id" placeholder="Enter Gas Station ID">
+                </div>
+                <div class="col-auto">
+                    <button (click)="ViewDetails()" type="submit" class="btn btn-success mb-3">Check your Orders</button>
+                </div>
+
+
+
+            </form>
+
+          <h3>All Orders</h3>
+          <!-- <div class="col-md-12"> -->
+         
+  
+                
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                          
+                            <th>Order ID</th>
+                            
+                            <th>Gas Station Name</th>
+                            <th>Address</th>
+                            <th>Mobile</th>
+                            <th>Order Date</th>
+                            <th>Quantity</th>
+                            <th>Fuel Type</th>
+                            <th>Allocation Status</th>
+                            <th>Schedule Status</th>
+                            <th>Dispatch Status</th>
+                            <th>Deliver Status</th>
+                            
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr *ngFor="let get of posts | async"> -->
+                          <tr *ngFor="let get of myOrders">
+                            <td>{{get.id}}</td>
+                          
+                            <td>{{get.name}}</td>
+                            <td>{{get.address}}</td>
+                            <td>{{get.mobile}}</td>
+                            <th>{{get.date}}</th>
+                            <td>{{get.qty}} L</td>
+                            <td *ngIf="get.stockId=='1'">Petrol</td>
+                            <td *ngIf="get.stockId=='2'">Diesel</td>
+                            <td *ngIf="get.stockId=='3'">Kerosene</td>
+                            <td *ngIf="get.allocation=='Success'" class="table-success">{{get.allocation}}</td>
+                            <td *ngIf="get.allocation=='Pending'" class="table-danger">{{get.allocation}}</td>
+
+                            <td *ngIf="get.schedule=='Success'" class="table-success">{{get.schedule}}</td>
+                            <td *ngIf="get.schedule=='Pending'" class="table-danger">{{get.schedule}}</td>
+
+                            <td *ngIf="get.dispatch=='Success'" class="table-success">{{get.dispatch}}</td>
+                            <td *ngIf="get.dispatch=='Pending'" class="table-danger">{{get.dispatch}}</td>
+
+                            <td *ngIf="get.deliver=='Success'" class="table-success">{{get.deliver}}</td>
+                            <td *ngIf="get.deliver=='Pending'" class="table-danger">{{get.deliver}}</td>
+                           
+                        </tr>
+                    </tbody>
+                
+                </table>
+            
+          
+
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
